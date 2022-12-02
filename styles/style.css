@@ -33,18 +33,10 @@ body {
 .main{
   background:lightgreen;
   height: 50vh;
-  display:flow-root;
-  /* overflow:hidden; */
-  padding:0 15px;
+  display: flex;
+  flex-direction: row;
 }
-/* .main::after{
-  content: "";
-  clear: both;
-} */
-.group{
-  float: left;
-  margin:0 15px;
-}
+
 .group1{
   background:gainsboro;
   width: 250px;
