@@ -3,7 +3,7 @@
 @import url(./reset.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -270,16 +270,17 @@ body {
 .visual-text {
   font-family: Georgia, "Times New Roman", Times, serif;
   animation: moveEffect 1000ms ease-in-out forwards;
-  position: relative;
+  position: absolute;
+  display:inline-block;
   z-index: 1;
 }
 
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
+  background: #fff;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 20px 20px 0 0;
 }
 
 .group {
@@ -287,17 +288,220 @@ body {
   float: left;
 }
 
-.group1 {
-  background-color: violet;
-  width: 250px;
+.group1{
+  width:250px;
 }
+
 .group2 {
-  background-color: salmon;
   width: 380px;
 }
 .group3 {
   background-color: gold;
   width: 190px;
+}
+
+/* 로그인 */
+.login {
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  border-bottom:1px solid #999;
+  padding-bottom:10px;
+}
+
+.user-email {
+  margin-bottom:5px;
+}
+
+.user-pw {
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 0 10px 10px 10px;
+} 
+
+.login-form button{
+  position: absolute;
+  top:0;
+  right:0;
+  background: coral;
+  border:0;
+  padding: 0 7px;
+  color:#fff;
+  border-radius:5px;
+  line-height:53px;
+}
+
+.sign{
+  background:#fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 5px 5px;
+}
+.icon-right-dir:before{
+  color:coral
+}
+/* 유효성검사 */
+.validation-list{
+  margin-top:25px;
+}
+.validation-list li{
+  margin-top:10px;
+}
+.validation-list a{
+  display:block;
+  padding:10px 10px 10px 55px;
+  background:url("./images/validation_icon.png") no-repeat 30px center, #eee linear-gradient(to bottom, #ccc 0%, #eee 100%) no-repeat;
+  border:1px solid #999;
+  border-radius: 40px;
+}
+.validation-list a:hover,
+.validation-list a:focus{
+  color:red
+}
+
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+
+.term-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+}
+
+.term-list div {
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject,
+.term-list-brief {
+  float: right;
+  width: 145px;
+}
+
+.term-list-subject {
+  color: #296897;
+  font-weight: 500;
+}
+
+.term-list-thumbnail {
+  float: left;
+}
+
+.term-list-thumbnail img {
+  vertical-align: middle;
+}
+
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.cross .term-list-subject,
+.cross .term-list-brief {
+  float: left;
+}
+
+.cross .term-list-thumbnail {
+  float: right;
+}
+
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+  /* width: 300px; */
+}
+
+.search-form-inner {
+  /* background-color: yellow; */
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-group {
+  /* background-color: pink; */
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+.form-group-label {
+  /* background-color: lime; */
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.form-group-input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  /* min-width: 0;
+  max-width: 100%; */
+}
+
+.search-button {
+  white-space: nowrap;
+  background-color: #000;
+  color: #fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.2rem;
 }
 
 /* 슬로건 */
